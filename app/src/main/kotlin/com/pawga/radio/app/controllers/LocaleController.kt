@@ -25,7 +25,7 @@ class LocaleController(
     converter: EmptyConverter<LocaleDTO>
 ) : AbstractController<LocaleDTO, Long, LocaleDTO, DbStorageService<LocaleDTO, LocaleDb, Long>>
     (service, converter) {
-    @Operation(summary = "Получить все языки")
+    @Operation(summary = "Получить все языки") // просто пример документирования через override одного метода
     override fun findAll(): ResponseEntity<List<LocaleDTO>> {
         return super.findAll()
     }
